@@ -1,0 +1,253 @@
+@charset "uft-8";
+/* fonts */
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* reset  */
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+body {
+  font-family: "NEXON Lv1 Gothic OTF";
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  /* color: #fffbde; */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+video {
+  height: 900px;
+}
+/* common  */
+.container {
+  width: 1260px;
+  margin: 0 auto;
+  /* border: 1px solid #000; */
+}
+/* 레이아웃 */
+#wrap {
+  width: 100%;
+  position: relative;
+
+  /* display: flex; */
+}
+/* header영역 */
+#header {
+  width: 100%;
+  height: 80px;
+  left: 0;
+  top: 0;
+  position: fixed;
+
+  /* background-color: #00AE77; */
+  /* background-color : #138444; */
+}
+.header__inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+  justify-content: space-between;
+}
+.header__inner .logo {
+  padding: 5px;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.header__inner .nav ul {
+  display: flex;
+}
+
+.header__inner .nav ul li a {
+  display: block;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: normal;
+  transition: all 0.6s;
+}
+.header__inner .nav ul li a:hover {
+  background-color: #00000011;
+  border-radius: 10px;
+  font-weight: bold;
+  /* text-decoration: underline; */
+}
+.header__inner .nav ul li .br {
+  color: #133e35;
+  font-weight: bold;
+  background-color: #00000011;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.header__inner .nav ul li .br:hover {
+  background-color: #fffbde;
+}
+.header__inner .log {
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background-color: #f4f4f4;
+  margin-right: 20px;
+  display: flex;
+}
+.header__inner .log img {
+  width: 19px;
+  margin-left: 10px;
+  height: 20px;
+}
+.header__inner .log p {
+  padding-left: 10px;
+  font-size: 17px;
+  color: #666;
+}
+/* CONTENTS */
+#contents {
+  width: 100%;
+}
+#contents .tittle {
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+}
+#contents .tittle h2 {
+  font-size: 50px;
+  color: #00ae77;
+  font-weight: bold;
+  padding-top: 180px;
+  text-transform: uppercase;
+
+  box-sizing: border-box;
+}
+#contents .tittle p {
+  border-bottom: 5px solid #00ae77;
+  display: inline-block;
+  padding: 10px;
+  width: 40px;
+}
+/* line */
+#contents .line {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+#contents .line .box {
+  width: 366px;
+  height: 366px;
+  border: 1px solid #cfcfcf;
+  margin: 5px;
+
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+#contents .line .box img {
+  width: 104px;
+  padding-top: 50px;
+
+  height: 104px;
+}
+#contents .line .box.box2 img {
+  width: 101px;
+  height: 89px;
+}
+#contents .line .text {
+  position: absolute;
+  left: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  width: 100%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#contents .line .text .btn {
+  font-weight: bold;
+  font-size: 14px;
+
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid #040404;
+}
+#contents .line .text .btn:hover {
+  color: #fff;
+  background-color: #040404;
+  border: 1px solid #fff;
+}
+#contents .line .text h3 {
+  font-size: 23px;
+  margin-top: 93px;
+  text-align: center;
+}
+#contents .line .text p {
+  margin-top: 12px;
+  line-height: 1.4;
+  font-size: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.popup-view {
+  width: 35%;
+  height: 100%;
+  border: 5px solid #00ae77;
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: none;
+}
+.popup-view img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.popup-close {
+  background-color: #00ae77;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  top: 10px;
+}
+.popup-close:hover {
+  color: #fff;
+  background-color: #000;
+}

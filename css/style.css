@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* fonts */
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* reset  */
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  box-sizing: border-box; /* 추가: 모든 요소의 box-sizing을 border-box로 설정 */
+}
+body {
+  font-family: "NEXON Lv1 Gothic OTF";
+  overflow-x: hidden; /* 추가: 가로 스크롤 방지 */
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+/* common  */
+img {
+  width: 100%;
+  vertical-align: top;
+}
+/* 레이아웃 */
+#wrap {
+  width: 100%;
+  display: flex;
+  min-height: 100vh; /* 수정: height를 min-height로 변경 */
+  overflow: auto; /* 추가: 스크롤 가능하도록 설정 */
+}
+/* left */
+#left {
+  width: 30%;
+  min-height: 100vh; /* 수정: height를 min-height로 변경 */
+  background-color: #fff;
+}
+.left__top {
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  text-align: center;
+}
+
+#left .nav ul {
+  margin-top: 40%;
+}
+
+#left .nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 20px 30px;
+  font-size: 28px;
+}
+#left .nav ul li a:hover {
+  font-weight: 700;
+}
+/* main */
+/* main */
+#main {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 추가: 수직 중앙 정렬 */
+  position: relative;
+  background-color: #133e35;
+}
+#main > img {
+  width: 8%;
+  height: 15rem;
+  padding-top: 42%;
+}
+#main .logo {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+#main .center_box {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 추가: 수직 및 수평 중앙 정렬 */
+  margin: 0 auto;
+}
+#main .center_box img {
+  width: 90%;
+  height: auto; /* 수정: 반응형을 위한 auto 높이 */
+  position: relative;
+}
+/* right */
+#right {
+  width: 30%;
+  min-height: 100vh;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 15%;
+  line-height: 1.5;
+  overflow: hidden;
+}
+#right .left__top {
+  font-size: 12px; /* 폰트 크기를 줄임 */
+  color: #666; /* 추가: 텍스트 색상 설정 */
+  margin-bottom: 10px; /* 추가: 아래쪽 간격 */
+}
+#right ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+#right ul li {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
+#right ul li a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: #666;
+  font-size: 12px;
+}
+.right__bottom {
+  margin-top: 200px;
+}
+.right__bottom a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+#right p {
+  text-align: center;
+  display: block;
+  color: #666;
+  font-size: 12px;
+}
+.copy {
+  line-height: 1.2;
+  font-weight: bold;
+}
+.copy:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 1920px) {
+  #wrap {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1440px) {
+  #wrap {
+    width: 100vw;
+    min-height: 100vh; /* 수정: height를 min-height로 변경 */
+    overflow: auto; /* 추가: 스크롤 가능하도록 설정 */
+  }
+  #left {
+    width: 25%;
+  }
+  #main {
+    width: 50%;
+    height: 100vh;
+  }
+  #main > img {
+    display: none;
+  }
+  #right {
+    width: 25%;
+  }
+  #right ul {
+    display: block;
+  }
+  #right ul {
+    font-size: 0px;
+  }
+  #right p {
+    font-size: 10px;
+  }
+  #right ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #666;
+    font-size: 10px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 744px) {
+  #wrap {
+    flex-direction: column;
+  }
+  #left,
+  #main,
+  #right {
+    width: 100%;
+    height: auto; /* 수정: 고정 높이를 해제하여 콘텐츠가 모두 표시되도록 함 */
+  }
+  #main > img {
+    display: none;
+  }
+  #main .logo {
+    margin-top: 20px;
+  }
+  #right {
+    margin-top: 20px;
+  }
+  #right ul {
+    display: flex;
+    font-size: 12px;
+  }
+  #right ul li a {
+    font-size: 12px;
+  }
+  #right p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 393px) {
+  #left .nav ul li a {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+  #main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 컬럼 방향으로 배치 */
+    padding: 10px;
+  }
+
+  #main .logo {
+    margin: 0 auto; /* 자동 수평 중앙 정렬 */
+    padding: 0;
+  }
+  #main .center_box {
+    width: 100%; /* 가로 크기를 100%로 설정 */
+    max-width: 300px; /* 최대 너비 설정 */
+    height: auto;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+  }
+
+  #main .center_box img {
+    width: 100%;
+    height: auto; /* 반응형 높이 설정 */
+  }
+
+  #right ul {
+    display: block;
+    font-size: 0;
+  }
+  #right ul li a {
+    padding: 5px;
+  }
+  .right__bottom {
+    margin-top: 50px;
+  }
+}
